@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FitTrack Pro | Profile</title>
+  <link rel="stylesheet" href="../Css/style.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-left">
+      <h1>FitTrack Pro 🏋️</h1>
+      <p class="muted">Profile & Trackers</p>
+    </div>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="planner.html">Planner</a>
+      <a href="progress.html">Progress</a>
+      <a class="active" href="profile.html">Profile</a>
+      <button class="btn" onclick="toggleTheme()">🌙</button>
+      <button class="btn danger" onclick="logoutUser()">Logout</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Profile 👤</h2>
+      <p class="muted">Update your details and save it ✅</p>
+
+      <div class="grid-2">
+        <div>
+          <label>Name</label>
+          <input id="pName" placeholder="Your name" />
+        </div>
+
+        <div>
+          <label>Goal</label>
+          <select id="pGoal">
+            <option>Fat Loss</option>
+            <option>Muscle Gain</option>
+            <option>Maintenance</option>
+          </select>
+        </div>
+
+        <div>
+          <label>Height (cm)</label>
+          <input id="pHeight" type="number" placeholder="180" />
+        </div>
+
+        <div>
+          <label>Weight (kg)</label>
+          <input id="pWeight" type="number" placeholder="82" />
+        </div>
+
+        <div>
+          <label>Age</label>
+          <input id="pAge" type="number" placeholder="21" />
+        </div>
+
+        <div>
+          <label>Activity Level</label>
+          <select id="pActivity">
+            <option value="1.2">Sedentary (low)</option>
+            <option value="1.375">Light (1-3 days/wk)</option>
+            <option value="1.55">Moderate (3-5 days/wk)</option>
+            <option value="1.725">Active (6-7 days/wk)</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="btn primary full" onclick="saveProfile()">Save Profile ✅</button>
+      <p class="muted" id="profileMsg" style="margin-top:10px;"></p>
+    </section>
+
+    <section class="card" style="margin-top:16px;">
+      <h2>Trackers 🎯</h2>
+      <p class="muted">Update your daily steps, water & protein targets.</p>
+
+      <div class="grid-2">
+        <div>
+          <label>Steps Today</label>
+          <input id="tSteps" type="number" placeholder="8000" />
+        </div>
+
+        <div>
+          <label>Water (Glasses)</label>
+          <input id="tWater" type="number" placeholder="8" />
+        </div>
+
+        <div>
+          <label>Protein (grams)</label>
+          <input id="tProtein" type="number" placeholder="120" />
+        </div>
+      </div>
+
+      <button class="btn primary full" onclick="saveTrackersUI()">Save Trackers ✅</button>
+      <p class="muted" id="trackerMsg" style="margin-top:10px;"></p>
+    </section>
+
+    <section class="card" style="margin-top:16px;">
+      <h2>Change Password 🔐</h2>
+      <p class="muted">Keep your account secure.</p>
+
+      <div class="grid-2">
+        <div>
+          <label>Old Password</label>
+          <input id="oldPass" type="password" placeholder="Old password" />
+        </div>
+        <div>
+          <label>New Password</label>
+          <input id="newPass" type="password" placeholder="New password" />
+        </div>
+      </div>
+
+      <button class="btn danger full" onclick="updatePassword()">Update Password</button>
+      <p class="muted" id="passMsg" style="margin-top:10px;"></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 FitTrack Pro. All rights reserved.</p>
+  </footer>
+
+  <script src="../Js/common.js"></script>
+  <script src="../Js/profile.js"></script>
+</body>
+</html>

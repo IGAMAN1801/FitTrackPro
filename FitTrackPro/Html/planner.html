@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FitTrack Pro | Planner</title>
+  <link rel="stylesheet" href="../Css/style.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-left">
+      <h1>FitTrack Pro 🏋️</h1>
+      <p class="muted">Workout + Diet Planner</p>
+    </div>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a class="active" href="planner.html">Planner</a>
+      <a href="progress.html">Progress</a>
+      <a href="profile.html">Profile</a>
+      <button class="btn" onclick="toggleTheme()">🌙</button>
+      <button class="btn danger" onclick="logoutUser()">Logout</button>
+    </nav>
+  </header>
+
+  <main class="container fade-in">
+
+    <div class="section-title">
+      <div>
+        <h2 id="welcomeText">Your Plan ✅</h2>
+        <p id="goalText">Goal: -</p>
+      </div>
+
+      <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <button class="btn primary" onclick="downloadPlanPDF()">Download PDF 📄</button>
+        <button class="btn danger" onclick="resetPlan()">Reset</button>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ✅ Premium Features Quick Cards -->
+    <section class="premium-grid">
+      <div class="premium-feature">
+        <div class="icon">🔥</div>
+        <h3>Goal Based Plan</h3>
+        <p>Auto workout & diet based on Fat Loss / Muscle Gain / Maintenance.</p>
+      </div>
+      <div class="premium-feature">
+        <div class="icon">📈</div>
+        <h3>Progress Tracker</h3>
+        <p>Track logs, view chart and export your progress data anytime.</p>
+      </div>
+      <div class="premium-feature">
+        <div class="icon">✅</div>
+        <h3>Simple & Realistic</h3>
+        <p>Easy plan for gym + Indian meals so you can stay consistent.</p>
+      </div>
+    </section>
+
+    <div style="height:14px;"></div>
+
+    <!-- ✅ Workout + Diet Premium Cards -->
+    <section class="plan-grid">
+      <div class="plan-card">
+        <div class="plan-card-header">
+          <h3>Workout Plan</h3>
+          <span class="tag">Weekly</span>
+        </div>
+        <div class="plan-card-body">
+          <img
+            class="plan-img"
+            src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1400&q=80"
+            alt="Workout"
+          />
+
+          <div class="pills">
+            <span class="pill">Strength</span>
+            <span class="pill">Cardio</span>
+            <span class="pill">Core</span>
+          </div>
+
+          <div style="margin-top:12px;" id="workoutPlan"></div>
+        </div>
+      </div>
+
+      <div class="plan-card">
+        <div class="plan-card-header">
+          <h3>Diet Plan</h3>
+          <span class="tag">Daily</span>
+        </div>
+        <div class="plan-card-body">
+          <img
+            class="plan-img"
+            src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1400&q=80"
+            alt="Diet"
+          />
+
+          <div class="pills">
+            <span class="pill">High Protein</span>
+            <span class="pill">Balanced</span>
+            <span class="pill">Easy Meals</span>
+          </div>
+
+          <div style="margin-top:12px;" id="dietPlan"></div>
+        </div>
+      </div>
+    </section>
+
+    <div style="margin-top:16px; display:flex; gap:10px; flex-wrap:wrap;">
+      <a href="progress.html"><button class="btn primary">Track Progress ➜</button></a>
+      <a href="profile.html"><button class="btn">Update Profile ➜</button></a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 FitTrack Pro. All rights reserved.</p>
+  </footer>
+
+  <!-- ✅ jsPDF CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <script src="../Js/common.js"></script>
+  <script src="../Js/planner.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FitTrack Pro | Home</title>
+  <link rel="stylesheet" href="../Css/style.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-left">
+      <h1>FitTrack Pro 🏋️</h1>
+      <p class="muted" id="userWelcome">Welcome</p>
+    </div>
+
+    <nav class="nav-links">
+      <a class="active" href="index.html">Home</a>
+      <a href="planner.html">Planner</a>
+      <a href="progress.html">Progress</a>
+      <a href="profile.html">Profile</a>
+      <button class="btn" onclick="toggleTheme()">🌙</button>
+      <button class="btn danger" onclick="logoutUser()">Logout</button>
+    </nav>
+  </header>
+
+  <main class="container fade-in">
+
+    <section class="fitness-hero">
+      <div class="fitness-hero-content">
+        <h2>Build Your Best Body 💪</h2>
+        <p>
+          Smart Fitness Planner with BMI + Calories + Workout + Diet + Progress Tracker ✅
+        </p>
+
+        <div class="hero-buttons">
+          <a href="planner.html"><button class="btn primary">Generate Plan ➜</button></a>
+          <a href="progress.html"><button class="btn">Track Progress ➜</button></a>
+        </div>
+
+        <div class="fitness-stats">
+          <div class="stat-box">
+            <h3>Workout</h3>
+            <p>Weekly Plans</p>
+          </div>
+          <div class="stat-box">
+            <h3>Diet</h3>
+            <p>Indian Meals</p>
+          </div>
+          <div class="stat-box">
+            <h3>Track</h3>
+            <p>Charts + CSV</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="premium-grid">
+      <div class="premium-feature">
+        <div class="icon">🔥</div>
+        <h3>Calories Calculator</h3>
+        <p>Maintenance + target calories based on your goal & activity.</p>
+      </div>
+      <div class="premium-feature">
+        <div class="icon">📄</div>
+        <h3>Plan PDF</h3>
+        <p>Download your weekly workout + diet plan as PDF.</p>
+      </div>
+      <div class="premium-feature">
+        <div class="icon">✅</div>
+        <h3>Daily Trackers</h3>
+        <p>Steps + Water + Protein tracker inside your profile.</p>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top:16px;">
+      <h3>BMI + Calories Calculator 🔥</h3>
+
+      <div class="grid-2">
+        <div>
+          <label>Your Name</label>
+          <input id="name" placeholder="Enter name" />
+        </div>
+
+        <div>
+          <label>Goal</label>
+          <select id="goal">
+            <option>Fat Loss</option>
+            <option>Muscle Gain</option>
+            <option>Maintenance</option>
+          </select>
+        </div>
+
+        <div>
+          <label>Height (cm)</label>
+          <input id="height" type="number" placeholder="180" />
+        </div>
+
+        <div>
+          <label>Weight (kg)</label>
+          <input id="weight" type="number" placeholder="82" />
+        </div>
+
+        <div>
+          <label>Age</label>
+          <input id="age" type="number" placeholder="21" />
+        </div>
+
+        <div>
+          <label>Activity Level</label>
+          <select id="activity">
+            <option value="1.2">Sedentary (low)</option>
+            <option value="1.375">Light (1-3 days/wk)</option>
+            <option value="1.55">Moderate (3-5 days/wk)</option>
+            <option value="1.725">Active (6-7 days/wk)</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="btn primary full" onclick="calculateAll()">Calculate BMI + Calories ✅</button>
+
+      <div class="result" id="bmiResult">Enter details and calculate ✅</div>
+
+      <div class="result" id="trackerSummary" style="margin-top:10px;">
+        🚶 Steps: <b>0</b> | 💧 Water: <b>0</b> glasses | 🥩 Protein: <b>0</b> g
+      </div>
+    </section>
+
+    <section class="gallery">
+      <div class="gallery-card">
+        <img src="https://images.unsplash.com/photo-1518611012118-f0c5f1a6fdc7?auto=format&fit=crop&w=1400&q=80" alt="Training">
+        <div class="g-body">
+          <h3>Strength Training</h3>
+          <p>Build lean muscle with progressive overload workouts.</p>
+        </div>
+      </div>
+
+      <div class="gallery-card">
+        <img src="https://images.unsplash.com/photo-1514996937319-344454492b37?auto=format&fit=crop&w=1400&q=80" alt="Cardio">
+        <div class="g-body">
+          <h3>Cardio Routine</h3>
+          <p>Boost endurance and burn fat with smart cardio sessions.</p>
+        </div>
+      </div>
+
+      <div class="gallery-card">
+        <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&w=1400&q=80" alt="Diet">
+        <div class="g-body">
+          <h3>Healthy Diet</h3>
+          <p>Simple Indian meals designed for fitness & consistency.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 FitTrack Pro. All rights reserved.</p>
+  </footer>
+
+  <script src="../Js/common.js"></script>
+  <script src="../Js/index.js"></script>
+</body>
+</html>

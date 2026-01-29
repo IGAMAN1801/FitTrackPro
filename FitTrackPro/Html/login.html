@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FitTrack Pro | Login</title>
+  <link rel="stylesheet" href="../Css/style.css" />
+</head>
+<body class="fit-landing">
+
+  <div class="auth-hero">
+    <div class="auth-overlay"></div>
+
+    <div class="auth-container">
+      <div class="auth-left">
+        <h1>FitTrack Pro 🏋️</h1>
+        <p>
+          Your Fitness Planner ✅ <br />
+          Workout + Diet + Progress tracking in one place.
+        </p>
+
+        <div class="auth-bullets">
+          <div class="bullet">✅ BMI + Calories Calculator</div>
+          <div class="bullet">✅ Workout & Diet Plan Generator</div>
+          <div class="bullet">✅ Progress + Chart + Export CSV</div>
+          <div class="bullet">✅ Daily Steps + Water + Protein Tracker</div>
+        </div>
+      </div>
+
+      <div class="auth-card premium-card">
+        <h2>Login 🔐</h2>
+        <p class="small-note">Create account once & your data stays saved ✅</p>
+
+        <div style="margin-top:14px;">
+          <label>Username</label>
+          <input id="username" placeholder="e.g. aman1801" />
+        </div>
+
+        <div style="margin-top:12px;">
+          <label>Password</label>
+          <input id="password" type="password" placeholder="Enter password" />
+        </div>
+
+        <button class="btn primary full" style="margin-top:14px;" onclick="loginUser()">Login</button>
+        <button class="btn full" style="margin-top:10px;" onclick="registerUser()">Create Account</button>
+
+        <button class="btn full" style="margin-top:10px;" onclick="toggleTheme()">🌙 Dark Mode</button>
+
+        <p id="authMsg" class="muted" style="margin-top:10px;"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="../Js/common.js"></script>
+  <script src="../Js/login.js"></script>
+</body>
+</html>
